@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pythonweb
+  name: flaskdemo2025
   labels:
-    app: pythonweb
+    app: flaskdemo2025
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pythonweb
+      app: flaskdemo2025
   template:
     metadata:
       labels:
-        app: pythonweb
+        app: flaskdemo2025
     spec:
       containers:
-      - name: pythonweb
-        image: bacdocker/pythonweb:v1
+      - name: flaskdemo2025
+        image: hapra123/flaskdemo:v1
         ports:
         - containerPort: 5000
